@@ -1,0 +1,26 @@
+{
+  "name": "devflowx",
+  "version": "1.0.0",
+  "description": "Containerized CI/CD and Release Automation Platform",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandulrasanjana/DevFlowX.git"
+  },
+  "keywords": [
+    "devops",
+    "ci-cd",
+    "docker",
+    "github-actions"
+  ],
+  "author": "Sandul Rasanjana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandulrasanjana/DevFlowX/issues"
+  },
+  "homepage": "https://github.com/sandulrasanjana/DevFlowX#readme"
+}
