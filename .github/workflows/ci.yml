@@ -1,3 +1,4 @@
+
 name: DevFlowX CI
 
 on:
@@ -11,7 +12,6 @@ on:
 
 jobs:
   test-and-build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -35,3 +35,12 @@ jobs:
 
       - name: Verify Docker image
         run: docker images devflowx
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: devflowx:${{ github.sha }}
+          format: table
+          exit-code: '0'
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
